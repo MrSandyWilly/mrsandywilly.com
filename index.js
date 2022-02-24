@@ -2,6 +2,8 @@ import "./_snowpack/pkg/modern-css-reset.min.css.proxy.js";
 import "./styles.css.proxy.js";
 import Typewriter from './_snowpack/pkg/typewriter-effect/dist/core.js';
 
+
+
 let header = document.getElementById("site-header");
 
 document.addEventListener('scroll', function(e) {
