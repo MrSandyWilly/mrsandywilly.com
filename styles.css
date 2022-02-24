@@ -12,7 +12,7 @@ html, body {
   margin: 0;
   line-height: 0.9;
 }
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .mrsandywilly span {
     display: block;
   }
@@ -65,6 +65,31 @@ body {
     width: 90%;
   }
 }
+@media (max-width: 767px) {
+  #header-inner {
+    display: block;
+  }
+}
+#header-inner #navbar-button {
+  display: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2em;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  #header-inner #navbar-button {
+    display: inline;
+  }
+}
+#header-inner #header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+#header-inner nav.shown {
+  display: block;
+}
 #header-inner nav a:not(.button) {
   text-transform: uppercase;
   margin: 0 1em;
@@ -78,6 +103,21 @@ body {
 #header-inner nav a:not(.button):hover {
   bottom: 2px;
   color: #09bc8a;
+}
+#header-inner nav a {
+  display: inline;
+}
+@media (max-width: 767px) {
+  #header-inner nav a {
+    display: block;
+    margin: 0.7em 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  #header-inner nav {
+    display: none;
+    text-align: center;
+  }
 }
 
 #hero {
