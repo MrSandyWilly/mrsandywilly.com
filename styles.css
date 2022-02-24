@@ -1,0 +1,270 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+html, body {
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.2);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 1em 0;
+}
+
+body {
+  background-color: #0f2335;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Roboto";
+}
+
+#site-header {
+  position: sticky;
+  top: 0;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+#cursor {
+  background-color: #09bc8a;
+  animation: blink 1.2s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.scrolled {
+  background-color: #0f2335;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+#header-inner {
+  font-family: "Red Hat Mono";
+  padding: 1.5rem 0;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header-inner nav a:not(.button) {
+  text-transform: uppercase;
+  margin: 0 1em;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  bottom: 0px;
+  transition: all 0.2s;
+  font-size: 0.9em;
+}
+#header-inner nav a:not(.button):hover {
+  bottom: 2px;
+  color: #09bc8a;
+}
+
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#hero-inner {
+  width: 60%;
+  margin: 0 auto;
+}
+#hero-inner h1 {
+  font-size: 5em;
+  font-weight: 900;
+}
+#hero-inner p {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 60%;
+  margin-bottom: 2.5em;
+}
+#hero-inner #hero-typed {
+  color: #09bc8a;
+  font-size: 1.1em;
+  font-family: "Red Hat Mono";
+}
+
+#about-inner p {
+  max-width: 30%;
+  margin: auto;
+}
+
+a {
+  font-family: "Red Hat Mono";
+  color: #09bc8a;
+  position: relative;
+  bottom: 0;
+  transition: all 0.2s;
+}
+
+a:hover {
+  bottom: 2px;
+}
+
+section {
+  max-width: 60%;
+  margin: 0 auto 50vh auto;
+}
+section .about-p {
+  max-width: 60%;
+}
+section ul {
+  color: rgba(255, 255, 255, 0.6);
+  list-style-type: none;
+  font-size: 0.9em;
+}
+section li::before {
+  content: "•";
+  color: #09bc8a;
+  display: inline-block;
+  margin-left: -1.5em;
+  width: 1em;
+}
+
+.project {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 3em 0;
+}
+.project:nth-child(odd) {
+  flex-direction: row;
+}
+.project:nth-child(odd) .project-details {
+  text-align: right;
+  flex-grow: 1;
+}
+.project:nth-child(odd) .project-details a {
+  display: inline-block;
+  text-decoration: none;
+  color: #09bc8a;
+  font-size: 1.2em;
+  margin-left: 1.5em;
+  margin-top: 1em;
+  position: relative;
+  bottom: 0px;
+  transition: all 0.2s;
+}
+.project:nth-child(odd) .project-details a:hover {
+  bottom: 5px;
+}
+.project:nth-child(odd) .project-details .project-stack span {
+  color: #09bc8a;
+  font-size: 0.9em;
+  font-family: "Roboto";
+  margin-left: 1.5em;
+}
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.project:nth-child(even) .project-details {
+  text-align: left;
+  flex-grow: 1;
+}
+.project:nth-child(even) .project-details a {
+  display: inline-block;
+  text-decoration: none;
+  color: #09bc8a;
+  font-size: 1.2em;
+  margin-right: 1.5em;
+  margin-top: 1em;
+  position: relative;
+  bottom: 0px;
+  transition: all 0.2s;
+}
+.project:nth-child(even) .project-details a:hover {
+  bottom: 5px;
+}
+.project:nth-child(even) .project-details .project-stack span {
+  color: #09bc8a;
+  font-size: 0.9em;
+  font-family: "Roboto";
+  margin-right: 1.5em;
+}
+.project .project-image {
+  background-image: url(./project_sample.png);
+  width: 40%;
+  position: relative;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1em;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.project .project-image .project-image-link {
+  transition: all 0.3s;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 35, 53, 0.7);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.project .project-image:hover .project-image-link {
+  opacity: 1;
+}
+
+.button {
+  color: #09bc8a;
+  border: #09bc8a solid 1px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 1em 1.5em;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: rgba(9, 188, 138, 0.2);
+}
+
+.directory {
+  color: #09bc8a;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.heading {
+  font-size: 1.5em;
+}
+.heading span {
+  color: #09bc8a;
+}
+
+.subheading {
+  font-family: "Red Hat Mono";
+  color: #09bc8a;
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+strong {
+  color: #09bc8a;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  font-family: "Red Hat Mono";
+  font-size: 0.9em;
+  padding-bottom: 2em;
+}
+footer p {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.5em;
+}

@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "modern-css-reset": "./modern-css-reset.min.css",
+    "typewriter-effect/dist/core": "./typewriter-effect/dist/core.js"
+  }
+}
