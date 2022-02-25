@@ -1,0 +1,29 @@
+name: Deploy to GitHub pages
+
+on:
+  push:
+    branches: [ main ] 
+
+jobs:
+  deploy:
+    name: Builds vite and deploys to pages branch
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo files
+        uses: actions/checkout@v2
+        
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build vite
+        run: npm run build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          publish_branch: gh_pages
+          publish_dir: dist
+          cname: mrsandywilly.com
+      
