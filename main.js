@@ -1,3 +1,5 @@
+import "/loader.js";
+
 import "modern-css-reset";
 import "./style.scss";
 import Typewriter from 'typewriter-effect/dist/core';
