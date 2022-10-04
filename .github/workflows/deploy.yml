@@ -25,5 +25,4 @@ jobs:
           github_token: ${{ secrets.TOKEN }}
           publish_branch: gh_pages
           publish_dir: dist
-          cname: mrsandywilly.com
       
